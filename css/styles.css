@@ -3,6 +3,15 @@
     transition: all 150ms ease-in-out;
     font-family: 'Montserrat', sans-serif;
 }
+.dark {
+    background: #000;
+}
+
+.light {
+    background: #fff;
+}
+
+
 
 header {
     display: flex;
@@ -14,8 +23,7 @@ header {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-header a, nav a, header button {
-    border-radius: 7px;
+header a, nav a, .btn {
     color: black;
     text-decoration: none;
     font-size: 20px;
@@ -25,7 +33,26 @@ header a, nav a, header button {
     padding: 5px 10px;
 }
 
-nav a:hover, header button:hover {
+.btn:hover {
     background-color: black;
     color: white;
+}
+
+.dark *:not(nav){
+    color: white;
+    background: black;
+}
+
+.dark .btn, .dark .title {
+    background: transparent;
+}
+
+.dark header {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+
+}
+
+.dark .btn:hover {
+    color: black;
+    background: white;
 }
